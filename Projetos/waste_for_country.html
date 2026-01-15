@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Waste for Country - Análise de Desperdício de Alimentos</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="project-header">
+        <div class="container">
+            <a href="../index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar ao Portfólio</a>
+            <h1>Projeto: Análise de Desperdício Alimentar Global</h1>
+            <p>Explorando os padrões de desperdício de alimentos em diferentes países para identificar os principais ofensores e o impacto econômico associado.</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section class="analysis-section">
+            <h2>Os Vilões do Desperdício: Qual Categoria Lidera?</h2>
+            <div class="analysis-content">
+                <div class="text">
+                    <p>Para entender o problema, o primeiro passo foi identificar quais tipos de alimentos são mais desperdiçados. A análise agregada dos dados revelou um culpado claro.</p>
+                    <p>Como o gráfico ao lado demonstra, a categoria <strong>"Prepared Food" (Comida Preparada)</strong> se destaca negativamente, sendo responsável pelo maior volume de desperdício em toneladas e, consequentemente, pela maior perda econômica, totalizando quase <strong>$18 trilhões</strong>.</p>
+                    <p>Isso sugere que o desperdício ocorre não apenas com os ingredientes crus, mas em grande parte com refeições que já foram preparadas e não foram consumidas, um ponto crítico para estratégias de mitigação.</p>
+                </div>
+                <div class="chart">
+                    <img src="Waste for Country/total_waste_by_category.png" alt="Gráfico de Desperdício por Categoria" style="width:100%">
+                </div>
+            </div>
+        </section>
+
+        <section class="analysis-section">
+            <h2>O Custo do Desperdício: Uma Relação Direta</h2>
+            <div class="analysis-content">
+                <div class="text">
+                    <p>Intuitivamente, mais desperdício significa mais dinheiro perdido. Mas quão forte é essa relação?</p>
+                    <p>Ao plotar o volume de desperdício contra a perda econômica, observamos uma correlação quase perfeita. A análise estatística confirma isso com um <strong>coeficiente de correlação de 0.97</strong>.</p>
+                    <p>Esta forte relação linear, visível no gráfico de dispersão, reforça que qualquer esforço para reduzir o volume de alimentos descartados terá um impacto financeiro positivo e direto, tornando o argumento para a ação ainda mais convincente.</p>
+                </div>
+                <div class="chart">
+                    <img src="Waste for Country/waste_vs_loss_correlation.png" alt="Gráfico de Correlação" style="width:100%">
+                </div>
+            </div>
+        </section>
+
+        <section class="analysis-section">
+            <h2>Analisando a Eficiência: Desperdício por Pessoa</h2>
+            <div class="analysis-content">
+                <div class="text">
+                    <p>O desperdício total de um país pode ser enganoso, pois nações mais populosas naturalmente geram mais resíduos. Uma métrica mais justa é o desperdício médio por pessoa (per capita).</p>
+                    <p>Para investigar isso, podemos usar uma consulta SQL para ordenar os países pelo maior desperdício per capita. Isso nos ajuda a identificar quais nações são menos eficientes, independentemente do tamanho de sua população.</p>
+                    <pre><code>-- Encontrar os países com maior desperdício per capita
+SELECT
+    "Country Name",
+    "Avg Waste per Capita (Kg)"
+FROM
+    Waste
+ORDER BY
+    "Avg Waste per Capita (Kg)" DESC;</code></pre>
+                    <p>Essa análise geralmente revela que países desenvolvidos com alto poder de compra tendem a ter um desperdício per capita maior, apontando para um problema cultural e de consumo.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="tool-section">
+            <h2>Ferramentas e Recursos do Projeto</h2>
+            <p>Para realizar esta análise, foram utilizadas diversas ferramentas e técnicas, cujos artefatos estão disponíveis para download e consulta.</p>
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <h3>Jupyter Notebook</h3>
+                    <p>Todo o processo de análise, desde a limpeza dos dados até a geração dos gráficos, está documentado em um Jupyter Notebook.</p>
+                    <a href="Waste for Country/Waste_Analysis.ipynb" class="btn" download>Download</a>
+                </div>
+                <div class="tool-card">
+                    <h3>Scripts SQL</h3>
+                    <p>As consultas usadas para a modelagem e extração de insights específicos estão disponíveis em um arquivo SQL.</p>
+                    <a href="Waste for Country/waste_analysis.sql" class="btn" download>Ver Queries</a>
+                </div>
+                <div class="tool-card">
+                    <h3>Dados Brutos</h3>
+                    <p>Baixe o conjunto de dados original (Waste.xlsx) para explorar por conta própria.</p>
+                    <a href="Waste for Country/Waste.xlsx" class="btn" download>Download Excel</a>
+                </div>
+                <div class="tool-card">
+                    <h3>Dashboard em Power BI</h3>
+                    <p>Para uma exploração interativa, um dashboard no Power BI pode ser desenvolvido. (Espaço para o link do dashboard).</p>
+                    <a href="#" class="btn" disabled>Em Breve</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 - Análise de Dados de Desperdício de Alimentos</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="../js/animation.js"></script>
+</body>
+</html>

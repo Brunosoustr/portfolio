@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Análise de Poluição por Plásticos - Portfólio</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/project_page.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header class="project-header">
+        <div class="container">
+            <a href="../index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Voltar ao Portfólio</a>
+            <h1>Projeto: Monitoramento Global de Poluição por Plásticos</h1>
+            <p>Estudo global para monitorar e analisar a poluição por plásticos em oceanos, identificando padrões e priorizando ações de mitigação.</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <section class="analysis-section">
+            <h2>Contexto do Estudo</h2>
+            <div class="analysis-content">
+                <div class="text">
+                    <p><strong>Situação para análise:</strong> Você trabalha em um estudo global para monitorar e analisar a poluição por plásticos em oceanos. O objetivo principal é identificar padrões na presença de diferentes tipos de plásticos, avaliar o impacto ambiental em diferentes profundidades e regiões, e priorizar ações de mitigação.</p>
+                    <p>O conjunto de dados inclui informações cruciais como: Data da observação, Região do oceano, Coordenadas (Latitude/Longitude), Tipo de Plástico (PE, PP, PS, PVC, PET), Peso (kg) e Profundidade (metros).</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="analysis-section">
+            <h2>Perguntas Analíticas</h2>
+            
+            <h3>Distribuição e Magnitude</h3>
+            <div class="analysis-content">
+                <div class="text">
+                    <ul>
+                        <li>Qual é o peso total de plásticos (em kg) encontrado em cada região do oceano?</li>
+                        <li>Quais tipos de plásticos predominam em cada região (análise por frequência e peso total)?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Análise Geográfica e Temporal</h3>
+            <div class="analysis-content">
+                <div class="text">
+                    <ul>
+                        <li>Como a distribuição de plásticos varia com latitude e longitude? Existem áreas específicas com maior concentração?</li>
+                        <li>Existe uma variação sazonal ou anual na presença de plásticos em diferentes regiões?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Impacto por Profundidade</h3>
+            <div class="analysis-content">
+                <div class="text">
+                    <ul>
+                        <li>Quais profundidades apresentam as maiores quantidades de plásticos? Existe um padrão entre os tipos de plásticos em diferentes profundidades?</li>
+                        <li>Algum tipo de plástico é encontrado predominantemente em camadas mais profundas dos oceanos?</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3>Análise de Correlação</h3>
+            <div class="analysis-content">
+                <div class="text">
+                    <ul>
+                        <li>Existe alguma correlação entre o tipo de plástico e a profundidade em que foi encontrado?</li>
+                        <li>Regiões com maior latitude (próximas aos polos) tendem a ter maior peso acumulado de plásticos?</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section class="analysis-section">
+            <h2>Cenários e Insights</h2>
+            <div class="analysis-content">
+                <div class="text">
+                    <p><strong>Impacto da Redução:</strong> Qual seria o impacto ambiental se os plásticos predominantes em certas regiões fossem reduzidos pela metade?</p>
+                    <p><strong>Priorização:</strong> Com base nos dados, quais seriam as regiões prioritárias para esforços de limpeza e conscientização?</p>
+                    <p>Além das análises textuais, este projeto visa criar visualizações dinâmicas (mapas de calor, gráficos de dispersão) e dashboards interativos.</p>
+                </div>
+            </div>
+        </section>
+        
+        <section class="tool-section">
+            <h2>Ferramentas e Recursos (Simulação)</h2>
+            <p>Este projeto utiliza Python e bibliotecas de Data Science para responder às perguntas de negócio.</p>
+            <div class="tool-grid">
+                <div class="tool-card">
+                    <h3>Jupyter Notebook</h3>
+                    <p>Documentação completa da análise exploratória e respostas às perguntas.</p>
+                    <a href="#" class="btn" onclick="alert('Arquivo ainda não disponível neste demo.')">Download</a>
+                </div>
+                <div class="tool-card">
+                    <h3>Visualizações</h3>
+                    <p>Mapas de calor e gráficos gerados durante o estudo.</p>
+                    <a href="#" class="btn" onclick="alert('Visualizações em desenvolvimento.')">Ver Galeria</a>
+                </div>
+                <div class="tool-card">
+                    <h3>Dataset</h3>
+                    <p>Conjunto de dados com campos: Date, Region, Latitude, Longitude, Plastic_Type, Weight, Depth.</p>
+                    <a href="#" class="btn" onclick="alert('Dados simulados.')">Download CSV</a>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2026 - Monitoramento Global de Poluição por Plásticos</p>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="../js/animation.js"></script>
+</body>
+</html>

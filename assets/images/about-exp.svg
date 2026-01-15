@@ -1,0 +1,24 @@
+<svg width="800" height="600" xmlns="http://www.w3.org/2000/svg">
+    <rect width="100%" height="100%" fill="transparent"/>
+    <rect x="100" y="395" width="40" height="155" fill="#03dac6" opacity="0.3" />
+<rect x="100" y="385" width="40" height="5" fill="#bb86fc" opacity="0.8" />
+<rect x="160" y="367" width="40" height="183" fill="#03dac6" opacity="0.35" />
+<rect x="160" y="357" width="40" height="5" fill="#bb86fc" opacity="0.8" />
+<rect x="220" y="320" width="40" height="230" fill="#03dac6" opacity="0.4" />
+<rect x="220" y="310" width="40" height="5" fill="#bb86fc" opacity="0.8" />
+<rect x="280" y="153" width="40" height="397" fill="#03dac6" opacity="0.44999999999999996" />
+<rect x="280" y="143" width="40" height="5" fill="#bb86fc" opacity="0.8" />
+<rect x="340" y="222" width="40" height="328" fill="#03dac6" opacity="0.5" />
+<rect x="340" y="212" width="40" height="5" fill="#bb86fc" opacity="0.8" />
+<rect x="400" y="250" width="40" height="300" fill="#03dac6" opacity="0.55" />
+<rect x="400" y="240" width="40" height="5" fill="#bb86fc" opacity="0.8" />
+<rect x="460" y="206" width="40" height="344" fill="#03dac6" opacity="0.6" />
+<rect x="460" y="196" width="40" height="5" fill="#bb86fc" opacity="0.8" />
+<rect x="520" y="177" width="40" height="373" fill="#03dac6" opacity="0.6499999999999999" />
+<rect x="520" y="167" width="40" height="5" fill="#bb86fc" opacity="0.8" />
+<rect x="580" y="235" width="40" height="315" fill="#03dac6" opacity="0.7" />
+<rect x="580" y="225" width="40" height="5" fill="#bb86fc" opacity="0.8" />
+<rect x="640" y="408" width="40" height="142" fill="#03dac6" opacity="0.75" />
+<rect x="640" y="398" width="40" height="5" fill="#bb86fc" opacity="0.8" />
+
+    </svg>

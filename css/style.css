@@ -1,0 +1,500 @@
+:root {
+    --primary-color: #bb86fc;
+    --secondary-color: #03dac6;
+    --background-color: #000000;
+    --surface-color: #1e1e1e;
+    --text-color: #e0e0e0;
+    --heading-color: #ffffff;
+    --border-radius: 8px;
+    --shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    --transition-speed: 0.3s;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+/* --- Reutilizáveis --- */
+.btn {
+    display: inline-block;
+    padding: 12px 28px;
+    border-radius: 50px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    color: #000;
+    text-decoration: none;
+    font-weight: 600;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    border: none;
+    cursor: pointer;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 15px rgba(187, 134, 252, 0.4);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--heading-color);
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+section {
+    padding: 6rem 5%;
+}
+
+/* --- Header & Navbar --- */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 100;
+    transition: box-shadow var(--transition-speed);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.nav-logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--heading-color);
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 5px;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
+    transition: width var(--transition-speed) ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+}
+
+/* --- Hero Section --- */
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: transparent;
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: var(--heading-color);
+    margin-bottom: 1rem;
+}
+
+.hero-subtitle {
+    font-size: 1.25rem;
+    margin-bottom: 2rem;
+    color: #bbb;
+}
+
+/* --- About Section (GSAP Horizontal Scroll) --- */
+.about-section-horizontal {
+    width: 100%;
+    height: 100vh; /* Takes full viewport for pinning */
+    overflow: hidden;
+    position: relative;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.horizontal-wrapper {
+    display: flex;
+    width: 400%; /* 4 Panels * 100% width */
+    height: 100%;
+    will-change: transform;
+}
+
+.panel {
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Individual Panel Gradients */
+.panel-bio { background: linear-gradient(135deg, #121212, #1a1a2e); }
+.panel-exp { background: linear-gradient(135deg, #0f2027, #203a43, #2c5364); }
+.panel-edu { background: linear-gradient(135deg, #141e30, #243b55); }
+.panel-certs { background: linear-gradient(135deg, #000000, #434343); }
+
+.panel-container {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+}
+
+.panel-content {
+    flex: 1;
+    padding: 8rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #e0e0e0;
+    z-index: 2;
+    background: linear-gradient(90deg, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.6) 100%);
+    backdrop-filter: blur(5px);
+}
+
+.panel-content h2 {
+    font-size: 3.5rem;
+    margin-bottom: 2rem;
+    color: var(--primary-color);
+}
+
+.panel-content p, .panel-content li {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #ccc;
+    line-height: 1.8;
+}
+
+.panel-image {
+    flex: 1.2;
+    background-repeat: no-repeat;
+    background-position: center right;
+    background-size: contain;
+    position: relative;
+    opacity: 0.6;
+    /* Mask to fade image from left to right */
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, black 30%);
+    mask-image: linear-gradient(to right, transparent 0%, black 30%);
+}
+
+/* Clean List Styles for Panels */
+.job-item-clean, .edu-item-clean {
+    margin-bottom: 2rem;
+    border-left: 3px solid var(--secondary-color);
+    padding-left: 1.5rem;
+}
+
+.job-item-clean h4, .edu-item-clean h4 {
+    color: var(--secondary-color);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.clean-list {
+    list-style: none;
+}
+
+.clean-list li {
+    margin-bottom: 0.8rem;
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    padding-bottom: 0.5rem;
+}
+
+.clean-list strong {
+    color: var(--primary-color);
+}
+
+/* Responsive adjustments for horizontal section */
+@media (max-width: 768px) {
+    .panel-container {
+        flex-direction: column;
+    }
+    
+    .panel-content {
+        padding: 6rem 2rem 2rem;
+        flex: 2;
+        background: rgba(0,0,0,0.8);
+    }
+
+    .panel-image {
+        flex: 1;
+        background-position: center bottom;
+        -webkit-mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+        mask-image: linear-gradient(to bottom, transparent 0%, black 20%);
+    }
+
+    .panel-content h2 {
+        font-size: 2.5rem;
+    }
+}
+
+/* --- Projects Section --- */
+.projects-section {
+    padding: 6rem 0; /* Remove horizontal padding to allow full scroll */
+}
+
+.projects-section .section-title {
+    padding: 0 5%;
+}
+
+.projects-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 2rem;
+    padding: 2rem 5%; /* Padding for the cards inside */
+    scroll-snap-type: x mandatory;
+    scrollbar-width: thin; /* Firefox */
+    scrollbar-color: var(--primary-color) var(--background-color);
+}
+
+.projects-grid::-webkit-scrollbar {
+    height: 8px;
+}
+
+.projects-grid::-webkit-scrollbar-track {
+    background: var(--background-color);
+}
+
+.projects-grid::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 20px;
+}
+
+.project-card {
+    min-width: 350px;
+    max-width: 400px;
+    background-color: var(--surface-color);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    overflow: hidden;
+    transition: transform var(--transition-speed) ease, box-shadow var(--transition-speed) ease;
+    scroll-snap-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 30px rgba(187, 134, 252, 0.15);
+}
+
+.project-info {
+    padding: 1.5rem;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    color: var(--heading-color);
+    margin-bottom: 0.5rem;
+}
+
+.project-description {
+    margin-bottom: 1rem;
+    color: #ccc;
+}
+
+/* --- Skills / Tech Carousel --- */
+.skills-section {
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tech-carousel {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.tech-track {
+    display: flex;
+    width: calc(180px * 36); 
+    animation: scroll 40s linear infinite;
+}
+
+.tech-item {
+    width: 180px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    transition: transform 0.3s;
+}
+
+.tech-item:hover {
+    transform: scale(1.1);
+}
+
+.tech-item i {
+    font-size: 4rem;
+    color: var(--heading-color);
+}
+
+/* Update tech icons to look better on dark mode if needed, usually they are fine or colored */
+
+.tech-item span {
+    font-weight: 600;
+    color: #ccc;
+}
+
+@keyframes scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-180px * 18)); }
+}
+
+/* --- Contact Section --- */
+.contact-section {
+    text-align: center;
+    background-color: #000;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-section p {
+    max-width: 600px;
+    margin: 0 auto 2rem;
+    color: #ccc;
+}
+
+.contact-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.contact-link {
+    text-decoration: none;
+    font-weight: 600;
+    color: var(--text-color);
+    padding: 10px 20px;
+    border: 2px solid var(--primary-color);
+    border-radius: 50px;
+    transition: all var(--transition-speed) ease;
+}
+
+.contact-link:hover {
+    background-color: var(--primary-color);
+    color: #000;
+}
+
+/* --- Footer --- */
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #000;
+    color: #666;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+/* --- Back Button --- */
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    position: absolute;
+    top: 2rem;
+    left: 2rem;
+    transition: background 0.3s ease;
+}
+
+.btn-back:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+/* --- Animations --- */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none; 
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+    
+    section {
+        padding: 4rem 5%;
+    }
+    
+    .about-container {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .btn-back {
+        position: static;
+        margin-bottom: 1rem;
+        display: inline-block;
+    }
+}

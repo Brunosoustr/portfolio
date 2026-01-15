@@ -1,0 +1,45 @@
+Country Name of the country
+Year: Year of data collection (2018-2024)
+Food Category: Type of food wasted (Fruits, Dairy, Meat, etc.)
+Total Waste (Tons) : Total amount of food wasted in tons
+Economic Loss (Million $): Estimated financial loss in million dollars
+Avg Waste per Capita (Kg): Average waste per person in kilograms
+Population (Million): Population of the country in millions
+Household Waste (%): Percentage of food waste from households
+
+
+"Situação para análise: Você está trabalhando em um projeto global para reduzir o desperdício de alimentos e seus impactos econômicos e ambientais. O objetivo é identificar padrões de desperdício em diferentes países e categorias alimentares, compreender os fatores socioeconômicos envolvidos e propor estratégias eficazes para mitigação.
+
+Perguntas analíticas:
+
+Impacto geral do desperdício:
+
+Qual é a categoria alimentar que gera o maior desperdício total em toneladas e o maior prejuízo econômico?
+
+Existe uma relação direta entre o total de resíduos gerados e a perda econômica?
+
+Eficiência e desperdício per capita:
+
+Quais países apresentam os maiores índices de desperdício per capita em relação à população total?
+
+Existe alguma categoria alimentar particularmente ineficiente, considerando resíduos per capita versus proporção da população?
+
+Influência dos fatores socioeconômicos:
+
+Qual a relação entre o percentual de resíduos domésticos e o desperdício total por categoria alimentar?
+
+Países com maior população apresentam maior desperdício absoluto ou proporcional?
+
+Tendências globais e regionais:
+
+Existe um padrão regional ou temporal no desperdício alimentar em função das categorias de alimentos e dos anos analisados?
+
+Como o desperdício em categorias específicas, como ""frutas e vegetais"" ou ""alimentos preparados"", varia entre países?
+
+Simulações e cenários:
+
+Qual seria o impacto na perda econômica se o desperdício doméstico fosse reduzido em 10% em cada país?
+
+Se a quantidade per capita de resíduos fosse reduzida para menos de 100 kg em cada país, quanto seria economizado em perdas econômicas?
+
+Além dessas análises, você poderia criar visualizações que destacassem comparações (gráficos de barras ou bolhas), mapas para representações globais e dashboards interativos para facilitar o entendimento dos stakeholders."

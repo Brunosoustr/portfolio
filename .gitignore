@@ -1,0 +1,11 @@
+# Scripts de automação
+generate_svg.py
+generate_about_assets.py
+
+# Arquivos de sistema e IDE
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Temporários do Gemini
+.gemini/
