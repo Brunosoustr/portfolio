@@ -3,189 +3,247 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Seu Nome - Portfólio de Análise de Dados</title>
+    <title>Bruno Sousa — Portfólio de Análise de Dados</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
     <link rel="stylesheet" type='text/css' href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
 </head>
 <body>
 
+    <!-- ========== HEADER ========== -->
     <header class="header">
         <nav class="navbar">
-            <a href="#home" class="nav-logo">Seu Nome</a>
+            <a href="#home" class="nav-logo">Bruno<span>.</span></a>
             <ul class="nav-menu">
-                <li class="nav-item"><a href="#about" class="nav-link">Sobre</a></li>
+                <li class="nav-item"><a href="#about"    class="nav-link">Sobre</a></li>
                 <li class="nav-item"><a href="#projects" class="nav-link">Projetos</a></li>
-                <li class="nav-item"><a href="#contact" class="nav-link">Contato</a></li>
+                <li class="nav-item"><a href="#contact"  class="nav-link">Contato</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
+
+        <!-- ========== HERO ========== -->
         <section id="home" class="hero">
             <div class="hero-content">
-                <h1 class="hero-title">Análise de Dados que Gera Valor</h1>
-                <p class="hero-subtitle">Transformando dados em insights acionáveis. Bem-vindo ao meu portfólio de projetos.</p>
-                <a href="#projects" class="btn">Ver Projetos</a>
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Disponível para novos projetos</span>
+                </div>
+                <h1 class="hero-title">
+                    Dados que geram<br>
+                    <em>decisões inteligentes</em>
+                </h1>
+                <p class="hero-subtitle">
+                    Engenharia de Dados &amp; Business Intelligence — transformando volumes de dados brutos em insights estratégicos de verdade.
+                </p>
+                <a href="#projects" class="btn">Ver Projetos <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="scroll-indicator">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <div class="arrow">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
             </div>
         </section>
 
+        <!-- ========== ABOUT — HORIZONTAL SCROLL ========== -->
         <section id="about" class="about-section-horizontal">
             <div class="horizontal-wrapper">
-                
-                <!-- Panel 1: Bio -->
-                <div class="panel panel-bio">
+
+                <!-- Panel 1 — Resumo -->
+                <div class="panel panel-profile">
                     <div class="panel-container">
-                        <div class="panel-content">
-                            <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Sobre Mim</h2>
-                            <p>Com experiência consolidada em garantia de qualidade, gestão e análise de dados, procuro soluções que produzam resultados eficientes e transformadores.</p>
-                            <p>Tenho conhecimento e experiência em Python, HTML, SQL, metodologias e ferramentas de análise de dados, fundamentos para desenvolvimento de softwares e metodologias ágeis.</p>
-                            <p>Atuo com Power BI, Looker, Tableau e Python para gerar relatórios visuais que possibilitem a identificação de padrões e anormalidades.</p>
-                        </div>
-                        <div class="panel-image" style="background-image: url('assets/images/about-bio.svg');"></div>
-                    </div>
-                </div>
-
-                <!-- Panel 2: Experience -->
-                <div class="panel panel-exp">
-                    <div class="panel-container">
-                        <div class="panel-content">
-                            <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Experiência</h2>
-                            
-                            <div class="job-item-clean">
-                                <h4>Gestor de Dados @ Embaixadores da Educação</h4>
-                                <ul>
-                                    <li>Business Intelligence e análise estratégica.</li>
-                                    <li>Governança de pipelines e automação (Google App Script).</li>
-                                </ul>
-                            </div>
-
-                            <div class="job-item-clean">
-                                <h4>QA Tech @ RANKMYAPP</h4>
-                                <ul>
-                                    <li>Análise de performance B2B/B2C.</li>
-                                    <li>Especialista em Power BI e gestão ágil.</li>
-                                </ul>
-                            </div>
-
-                            <div class="job-item-clean">
-                                <h4>Supervisor de Qualidade @ Okanesat</h4>
-                                <ul>
-                                    <li>Otimização de workflows e relatórios visuais.</li>
-                                </ul>
-                            </div>
-                        </div>
-                        <div class="panel-image" style="background-image: url('assets/images/about-exp.svg');"></div>
-                    </div>
-                </div>
-
-                <!-- Panel 3: Education -->
-                <div class="panel panel-edu">
-                    <div class="panel-container">
-                        <div class="panel-content">
-                            <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Formação</h2>
-                            
-                            <div class="edu-item-clean">
-                                <h4>Gestão de Tecnologia da Informação</h4>
-                                <p>Sumaré - Cursando</p>
-                            </div>
-                            
-                            <div class="edu-item-clean">
-                                <h4>Administração de Comércios</h4>
-                                <p>SENAC - Completo</p>
-                            </div>
-                        </div>
-                        <div class="panel-image" style="background-image: url('assets/images/about-edu.svg');"></div>
-                    </div>
-                </div>
-
-                <!-- Panel 4: Certifications -->
-                <div class="panel panel-certs">
-                    <div class="panel-container">
-                        <div class="panel-content">
-                            <h2 class="section-title" style="text-align: left; margin-bottom: 1rem;">Skills & Certs</h2>
+                        <div class="panel-content" data-num="01">
+                            <span class="section-label">Sobre mim</span>
+                            <h2 class="section-title">Resumo Profissional</h2>
+                            <p>Profissional de Engenharia de Dados e Business Intelligence com atuação em ambientes corporativos e acadêmicos. Especialista em transformar volumes de dados brutos em insights estratégicos que suportam tomadas de decisão.</p>
                             <ul class="clean-list">
-                                <li><strong>Metodologias Ágeis:</strong> Lean, Kanban, Scrum</li>
-                                <li><strong>QA & Testes:</strong> Selenium, Robot Framework</li>
-                                <li><strong>Dados:</strong> Python, SQL, Power BI, Looker, Tableau</li>
-                                <li><strong>Segurança:</strong> Fundamentos de Cibersegurança</li>
+                                <li>Modelagem relacional e dimensional (Star / Snowflake)</li>
+                                <li>Pipelines ETL/ELT com Python, Airflow e Google Cloud</li>
+                                <li>Análise exploratória com pandas, NumPy e SciPy</li>
+                                <li>Dashboarding em Power BI, Tableau, Looker e Grafana</li>
+                                <li>Governança de dados, qualidade e documentação de metadata</li>
                             </ul>
                         </div>
-                        <div class="panel-image" style="background-image: url('assets/images/about-certs.svg');"></div>
                     </div>
                 </div>
 
-            </div>
+                <!-- Panel 2 — Experiência -->
+                <div class="panel panel-exp">
+                    <div class="panel-container">
+                        <div class="panel-content" data-num="02">
+                            <span class="section-label">Carreira</span>
+                            <h2 class="section-title">Experiência Profissional</h2>
+
+                            <div class="job-item-clean">
+                                <h4>Gestor de Dados · Embaixadores da Educação</h4>
+                                <ul>
+                                    <li>Projetos de BI com Power BI e Looker para acompanhamento de KPIs educacionais</li>
+                                    <li>Pipelines automatizados em Python/BigQuery e Google Apps Script</li>
+                                    <li>Implementação de estratégia de governança e revisão de modelagem</li>
+                                    <li>Coordenação de equipe multidisciplinar com metodologia Scrum</li>
+                                </ul>
+                            </div>
+
+                            <div class="job-item-clean">
+                                <h4>QA Tech · RANKMYAPP</h4>
+                                <ul>
+                                    <li>Testes automatizados com Selenium e Robot Framework</li>
+                                    <li>Análise de performance em ambientes B2B/B2C</li>
+                                    <li>Dashboards Power BI para monitoramento de métricas de qualidade</li>
+                                </ul>
+                            </div>
+
+                            <div class="job-item-clean">
+                                <h4>Supervisor de Qualidade · Okanesat</h4>
+                                <ul>
+                                    <li>Mapeamento e otimização de workflows com ferramentas de BI</li>
+                                    <li>Relatórios visuais avançados para stakeholders internos</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 3 — Formação -->
+                <div class="panel panel-edu">
+                    <div class="panel-container">
+                        <div class="panel-content" data-num="03">
+                            <span class="section-label">Educação</span>
+                            <h2 class="section-title">Formação &amp; Certificações</h2>
+
+                            <div class="edu-item-clean">
+                                <h4>Gestão de Tecnologia da Informação</h4>
+                                <p>Sumaré · em andamento</p>
+                            </div>
+
+                            <div class="edu-item-clean">
+                                <h4>Administração de Comércio</h4>
+                                <p>SENAC · concluído</p>
+                            </div>
+
+                            <span class="subheading">Certificações</span>
+                            <ul class="clean-list">
+                                <li>Metodologias Ágeis: Lean, Kanban, Scrum</li>
+                                <li>QA &amp; Testes: Selenium, Robot Framework</li>
+                                <li>Dados: Python, SQL, Power BI, Looker, Tableau</li>
+                                <li>Segurança: Fundamentos de Cibersegurança</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Panel 4 — Competências -->
+                <div class="panel panel-certs">
+                    <div class="panel-container">
+                        <div class="panel-content" data-num="04">
+                            <span class="section-label">Skills</span>
+                            <h2 class="section-title">Competências Técnicas</h2>
+                            <ul class="clean-list two-columns">
+                                <li>Python (pandas, NumPy, SciPy)</li>
+                                <li>SQL (PostgreSQL, MySQL, BigQuery)</li>
+                                <li>Power BI, Tableau, Looker, Grafana</li>
+                                <li>Machine Learning (scikit-learn, TF)</li>
+                                <li>Scrum, Kanban, Lean</li>
+                                <li>QA: Selenium, Robot Framework</li>
+                                <li>Cloud: GCP — BigQuery, Cloud Fn</li>
+                                <li>Cibersegurança: Fundamentos</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+            </div><!-- /.horizontal-wrapper -->
         </section>
 
-        <!-- Modals removed as requested -->
-
-        <!-- Seção Tecnologias -->
-
+        <!-- ========== PROJECTS ========== -->
         <section id="projects" class="projects-section">
+            <span class="section-label" style="display:block;text-align:center;margin-bottom:0.75rem;">Portfólio</span>
             <h2 class="section-title">Meus Projetos</h2>
+            <p class="section-subtitle">Estudos de caso reais com foco em impacto e clareza analítica.</p>
             <div class="projects-grid">
+
+                <!-- Project 1 -->
                 <div class="project-card">
+                    <div class="project-image" style="background-image: url('assets/images/python-project.png');"></div>
                     <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Python</span>
+                            <span class="tag">SQL</span>
+                            <span class="tag">Data Analysis</span>
+                        </div>
                         <h3 class="project-title">Waste for Country</h3>
-                        <p class="project-description">Análise de dados sobre desperdício de alimentos em diversos países.</p>
-                        <a href="Projetos/waste_for_country.html" class="btn">Ver Projeto</a>
+                        <p class="project-description">Análise aprofundada de dados sobre o desperdício alimentar global, identificando padrões de perda econômica e impacto ambiental por região.</p>
+                        <a href="Projetos/waste_for_country.html" class="project-link">Ver Estudo Completo <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
+
+                <!-- Project 2 -->
                 <div class="project-card">
+                    <div class="project-image" style="background-image: url('assets/images/tableau-dashboard.png');"></div>
                     <div class="project-info">
+                        <div class="project-tags">
+                            <span class="tag">Tableau</span>
+                            <span class="tag">Sustainability</span>
+                            <span class="tag">Global Trends</span>
+                        </div>
                         <h3 class="project-title">Monitoramento de Plásticos</h3>
-                        <p class="project-description">Análise global da poluição por plásticos em oceanos e seus impactos.</p>
-                        <a href="Projetos/plastico_analise.html" class="btn">Ver Projeto</a>
+                        <p class="project-description">Visualização interativa da poluição plástica nos oceanos, mapeando fontes principais e projetando cenários futuros de impacto ecológico.</p>
+                        <a href="Projetos/plastico_analise.html" class="project-link">Explorar Dados <i class="fas fa-arrow-right"></i></a>
                     </div>
                 </div>
-                <!-- Outros projetos podem ser adicionados aqui -->
+
             </div>
         </section>
 
-        <!-- Seção Tecnologias -->
+        <!-- ========== SKILLS / CAROUSEL ========== -->
         <section id="skills" class="skills-section">
+            <span class="section-label" style="display:block;text-align:center;margin-bottom:0.75rem;">Stack</span>
             <h2 class="section-title">Tecnologias que Domino</h2>
             <div class="tech-carousel">
                 <div class="tech-track">
-                    <!-- Itens Originais -->
                     <div class="tech-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
                     <div class="tech-item"><i class="devicon-pandas-plain colored"></i><span>Pandas</span></div>
                     <div class="tech-item"><i class="devicon-numpy-plain colored"></i><span>NumPy</span></div>
                     <div class="tech-item"><i class="devicon-matplotlib-plain colored"></i><span>Matplotlib</span></div>
                     <div class="tech-item"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
-                    <div class="tech-item"><i class="fas fa-database colored"></i><span>SQL</span></div>
-                    <div class="tech-item"><i class="fas fa-chart-bar colored"></i><span>Power BI</span></div>
-                    <div class="tech-item"><i class="fas fa-table colored"></i><span>Tableau</span></div>
-                    <div class="tech-item"><i class="fas fa-project-diagram colored"></i><span>KNIME</span></div>
+                    <div class="tech-item"><i class="fas fa-database" style="color:#5b5ef4"></i><span>SQL</span></div>
+                    <div class="tech-item"><i class="fas fa-chart-bar" style="color:#f2c811"></i><span>Power BI</span></div>
+                    <div class="tech-item"><i class="fas fa-table" style="color:#e97627"></i><span>Tableau</span></div>
+                    <div class="tech-item"><i class="fas fa-project-diagram" style="color:#ffa500"></i><span>KNIME</span></div>
                     <div class="tech-item"><i class="devicon-grafana-plain colored"></i><span>Grafana</span></div>
-                    <div class="tech-item"><i class="fas fa-eye colored"></i><span>Looker</span></div>
-                    <div class="tech-item"><i class="fas fa-chart-pie colored"></i><span>Qlik</span></div>
-                    <div class="tech-item"><i class="fas fa-file-excel colored"></i><span>Excel</span></div>
-                    <div class="tech-item"><i class="fas fa-code colored"></i><span>VBA</span></div>
+                    <div class="tech-item"><i class="fas fa-eye" style="color:#34a853"></i><span>Looker</span></div>
+                    <div class="tech-item"><i class="fas fa-chart-pie" style="color:#009845"></i><span>Qlik</span></div>
+                    <div class="tech-item"><i class="fas fa-file-excel" style="color:#1d6f42"></i><span>Excel</span></div>
+                    <div class="tech-item"><i class="fas fa-code" style="color:#6b7280"></i><span>VBA</span></div>
                     <div class="tech-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
                     <div class="tech-item"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
                     <div class="tech-item"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
                     <div class="tech-item"><i class="devicon-react-original colored"></i><span>React</span></div>
-
-                    <!-- Itens Duplicados para Loop Infinito -->
+                    <!-- duplicates for infinite loop -->
                     <div class="tech-item"><i class="devicon-python-plain colored"></i><span>Python</span></div>
                     <div class="tech-item"><i class="devicon-pandas-plain colored"></i><span>Pandas</span></div>
                     <div class="tech-item"><i class="devicon-numpy-plain colored"></i><span>NumPy</span></div>
                     <div class="tech-item"><i class="devicon-matplotlib-plain colored"></i><span>Matplotlib</span></div>
                     <div class="tech-item"><i class="devicon-tensorflow-original colored"></i><span>TensorFlow</span></div>
-                    <div class="tech-item"><i class="fas fa-database colored"></i><span>SQL</span></div>
-                    <div class="tech-item"><i class="fas fa-chart-bar colored"></i><span>Power BI</span></div>
-                    <div class="tech-item"><i class="fas fa-table colored"></i><span>Tableau</span></div>
-                    <div class="tech-item"><i class="fas fa-project-diagram colored"></i><span>KNIME</span></div>
+                    <div class="tech-item"><i class="fas fa-database" style="color:#5b5ef4"></i><span>SQL</span></div>
+                    <div class="tech-item"><i class="fas fa-chart-bar" style="color:#f2c811"></i><span>Power BI</span></div>
+                    <div class="tech-item"><i class="fas fa-table" style="color:#e97627"></i><span>Tableau</span></div>
+                    <div class="tech-item"><i class="fas fa-project-diagram" style="color:#ffa500"></i><span>KNIME</span></div>
                     <div class="tech-item"><i class="devicon-grafana-plain colored"></i><span>Grafana</span></div>
-                    <div class="tech-item"><i class="fas fa-eye colored"></i><span>Looker</span></div>
-                    <div class="tech-item"><i class="fas fa-chart-pie colored"></i><span>Qlik</span></div>
-                    <div class="tech-item"><i class="fas fa-file-excel colored"></i><span>Excel</span></div>
-                    <div class="tech-item"><i class="fas fa-code colored"></i><span>VBA</span></div>
+                    <div class="tech-item"><i class="fas fa-eye" style="color:#34a853"></i><span>Looker</span></div>
+                    <div class="tech-item"><i class="fas fa-chart-pie" style="color:#009845"></i><span>Qlik</span></div>
+                    <div class="tech-item"><i class="fas fa-file-excel" style="color:#1d6f42"></i><span>Excel</span></div>
+                    <div class="tech-item"><i class="fas fa-code" style="color:#6b7280"></i><span>VBA</span></div>
                     <div class="tech-item"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
                     <div class="tech-item"><i class="devicon-html5-plain colored"></i><span>HTML</span></div>
                     <div class="tech-item"><i class="devicon-css3-plain colored"></i><span>CSS</span></div>
@@ -194,22 +252,31 @@
             </div>
         </section>
 
+        <!-- ========== CONTACT ========== -->
         <section id="contact" class="contact-section">
-            <h2 class="section-title">Vamos Conversar!</h2>
-            <p>Estou aberto a novas oportunidades e colaborações. Entre em contato através das minhas redes.</p>
+            <span class="section-label" style="display:block;text-align:center;margin-bottom:0.75rem;">Contato</span>
+            <h2 class="section-title">Vamos Conversar</h2>
+            <p>Estou aberto a novas oportunidades e colaborações. Entre em contato através das minhas redes ou por e-mail.</p>
             <div class="contact-links">
-                <a href="#" class="contact-link" target="_blank" rel="noopener noreferrer">LinkedIn</a>
-                <a href="#" class="contact-link" target="_blank" rel="noopener noreferrer">GitHub</a>
-                <a href="mailto:seuemail@example.com" class="contact-link">Email</a>
+                <a href="#" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-linkedin-in"></i> LinkedIn
+                </a>
+                <a href="#" class="contact-link" target="_blank" rel="noopener noreferrer">
+                    <i class="fab fa-github"></i> GitHub
+                </a>
+                <a href="mailto:seuemail@example.com" class="contact-link">
+                    <i class="fas fa-envelope"></i> E-mail
+                </a>
             </div>
         </section>
+
     </main>
 
     <footer class="footer">
-        <p>&copy; 2025 Seu Nome. Feito com ❤️</p>
+        <p>&copy; 2026 Bruno Sousa — Portfólio de Dados</p>
     </footer>
 
-    <!-- GSAP CDN -->
+    <!-- GSAP -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
     <script src="js/script.js"></script>
