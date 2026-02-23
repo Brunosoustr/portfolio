@@ -1,4 +1,4 @@
-# Data Portfolio - [Seu Nome]
+# Data Portfolio - [Bruno Sousa]
 
 Bem-vindo ao meu portfólio de análise de dados. Este site foi desenvolvido para demonstrar minhas habilidades técnicas em Python, SQL, Power BI e visualização de dados.
 
