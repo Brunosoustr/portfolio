@@ -25,9 +25,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Project Cards: subtle 3-D tilt ─────────────────────────────
     projectCards.forEach(card => {
         card.addEventListener('mousemove', e => {
-            const r   = card.getBoundingClientRect();
-            const rx  = ((e.clientY - r.top)  / r.height - 0.5) * 8;
-            const ry  = ((e.clientX - r.left) / r.width  - 0.5) * -8;
+            const r = card.getBoundingClientRect();
+            const rx = ((e.clientY - r.top) / r.height - 0.5) * 8;
+            const ry = ((e.clientX - r.left) / r.width - 0.5) * -8;
             gsap.to(card, { rotationX: rx, rotationY: ry, ease: 'power1.out', duration: 0.3 });
         });
         card.addEventListener('mouseleave', () => {
@@ -37,8 +37,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // ── Horizontal Scroll (About) ──────────────────────────────────
     const horizontalSection = document.querySelector('.about-section-horizontal');
-    const wrapper           = document.querySelector('.horizontal-wrapper');
-    const panels            = gsap.utils.toArray('.panel');
+    const wrapper = document.querySelector('.horizontal-wrapper');
+    const panels = gsap.utils.toArray('.panel');
 
     if (!horizontalSection || !wrapper || !panels.length) return;
 
@@ -59,13 +59,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Progress bar ───────────────────────────────────────────────
     const progressBar = document.createElement('div');
     Object.assign(progressBar.style, {
-        position:   'fixed',
-        top:        '0',
-        left:       '0',
-        width:      '0%',
-        height:     '3px',
-        background: 'linear-gradient(90deg, #5b5ef4, #06b6d4)',
-        zIndex:     '999',
+        position: 'fixed',
+        top: '0',
+        left: '0',
+        width: '0%',
+        height: '3px',
+        background: 'linear-gradient(90deg, #2563eb, #10b981)',
+        zIndex: '999',
         transition: 'width 0.08s linear',
         borderRadius: '0 2px 2px 0',
     });
@@ -75,15 +75,15 @@ document.addEventListener('DOMContentLoaded', () => {
     const dotsWrap = document.createElement('div');
     dotsWrap.className = 'panel-indicators-container';
     Object.assign(dotsWrap.style, {
-        position:       'fixed',
-        right:          '1.75rem',
-        top:            '50%',
-        transform:      'translateY(-50%)',
-        zIndex:         '200',
-        display:        'flex',
-        flexDirection:  'column',
-        gap:            '0.7rem',
-        alignItems:     'center',
+        position: 'fixed',
+        right: '1.75rem',
+        top: '50%',
+        transform: 'translateY(-50%)',
+        zIndex: '200',
+        display: 'flex',
+        flexDirection: 'column',
+        gap: '0.7rem',
+        alignItems: 'center',
     });
 
     // Panel labels for tooltip text
@@ -91,19 +91,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     panels.forEach((panel, i) => {
         const dot = document.createElement('button');
-        dot.className   = 'panel-indicator';
+        dot.className = 'panel-indicator';
         dot.setAttribute('aria-label', panelLabels[i] || `Painel ${i + 1}`);
         dot.title = panelLabels[i] || '';
         Object.assign(dot.style, {
-            width:        '8px',
-            height:       '8px',
+            width: '8px',
+            height: '8px',
             borderRadius: '50%',
-            border:       'none',
-            background:   'rgba(91,94,244,0.2)',
-            cursor:       'pointer',
-            padding:      '0',
-            transition:   'all 0.3s',
-            outline:      'none',
+            border: 'none',
+            background: 'rgba(37, 99, 235, 0.15)',
+            cursor: 'pointer',
+            padding: '0',
+            transition: 'all 0.3s',
+            outline: 'none',
         });
         dotsWrap.appendChild(dot);
     });
@@ -115,16 +115,16 @@ document.addEventListener('DOMContentLoaded', () => {
         dots.forEach((d, i) => {
             if (i === idx) {
                 Object.assign(d.style, {
-                    background:   '#5b5ef4',
-                    transform:    'scale(1.6)',
-                    boxShadow:    '0 0 0 3px rgba(91,94,244,0.18)',
+                    background: '#2563eb',
+                    transform: 'scale(1.6)',
+                    boxShadow: '0 0 0 3px rgba(37, 99, 235, 0.15)',
                 });
                 panels[i].classList.add('is-active');
             } else {
                 Object.assign(d.style, {
-                    background:   'rgba(91,94,244,0.2)',
-                    transform:    'scale(1)',
-                    boxShadow:    'none',
+                    background: 'rgba(37, 99, 235, 0.15)',
+                    transform: 'scale(1)',
+                    boxShadow: 'none',
                 });
                 panels[i].classList.remove('is-active');
             }
@@ -136,12 +136,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── GSAP Horizontal Scroll Tween ───────────────────────────────
     const scrollTween = gsap.to(panels, {
         xPercent: -100 * (panels.length - 1),
-        ease:     'none',
+        ease: 'none',
         scrollTrigger: {
-            trigger:  '.about-section-horizontal',
-            pin:      true,
-            scrub:    0.5,
-            end:      () => '+=' + (panels.length * 100) + '%',
+            trigger: '.about-section-horizontal',
+            pin: true,
+            scrub: 0.5,
+            end: () => '+=' + (panels.length * 100) + '%',
             onUpdate: self => {
                 const progress = self.progress;
 
@@ -161,8 +161,8 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Dot click: scroll to matching panel position ────────────────
     dots.forEach((dot, i) => {
         dot.addEventListener('click', () => {
-            const st       = scrollTween.scrollTrigger;
-            const total    = st.end - st.start;
+            const st = scrollTween.scrollTrigger;
+            const total = st.end - st.start;
             const fraction = i / (panels.length - 1);
             window.scrollTo({ top: st.start + total * fraction, behavior: 'smooth' });
         });
@@ -178,11 +178,11 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 0.8,
             ease: 'power3.out',
             scrollTrigger: {
-                trigger:           panel,
+                trigger: panel,
                 containerAnimation: scrollTween,
-                start:             'left 80%',
-                end:               'left 30%',
-                scrub:             true,
+                start: 'left 80%',
+                end: 'left 30%',
+                scrub: true,
             },
         });
     });
@@ -190,10 +190,10 @@ document.addEventListener('DOMContentLoaded', () => {
     // ── Keyboard navigation for panels ─────────────────────────────
     document.addEventListener('keydown', e => {
         if (!scrollTween.scrollTrigger) return;
-        const st       = scrollTween.scrollTrigger;
-        const total    = st.end - st.start;
+        const st = scrollTween.scrollTrigger;
+        const total = st.end - st.start;
         const progress = st.progress;
-        const current  = Math.round(progress * (panels.length - 1));
+        const current = Math.round(progress * (panels.length - 1));
 
         if (e.key === 'ArrowRight' && current < panels.length - 1) {
             e.preventDefault();
